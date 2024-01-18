@@ -1,0 +1,205 @@
+:root{
+  --primary: #18D6F0;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    height: 100vh;
+    background-image: url(images/planet-earth-background\ \(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: var(--primary);
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    left: 0.3em;
+    bottom: 0.3em;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 0px 20px rgba(0,0,0,0.4);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .switch input:checked + .slider {
+    background: var(--primary);
+  }
+  
+  .switch input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary);
+  }
+  
+  .switch input:checked + .slider:before {
+    transform: translateX(1.6em);
+    width: 2em;
+    height: 2em;
+    bottom: 0;
+  }
+nav{
+    display: flex;
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.logo{
+    display: flex;
+}
+.input-container{
+  border-bottom: 2px solid var(--primary);
+  border-left: 2px solid var(--primary);
+  border-top: 2px solid var(--primary);
+}
+.search-btn{
+  border-bottom: 2px solid var(--primary);
+  border-right: 2px solid var(--primary);
+  border-top: 2px solid var(--primary);
+}
+.input-container input{
+    padding: 20px 10px;
+    width: 400px;
+    color: white;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    background: transparent;
+    filter: 50px;
+    outline: none;
+    border: none;
+}
+.input-container input:active{
+  outline: none;
+}
+.search-btn button{
+  padding: 20px 10px;
+  background: transparent ;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  letter-spacing: 2px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.search-btn button:hover{
+  background-color: var(--primary);
+}
+.search{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.metric{
+    display: flex;
+    width: 170px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Helvetica, sans-serif;
+    color: white;
+}
+.logo > h2{
+    padding: 10px 20px;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 2px;
+}
+.logo img{
+    width: 50px;
+}
+.container{
+  width: 500px;
+  margin: 0 auto;
+}
+.container .location-info{
+  display: flex;
+  color: white;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: end;
+}
+.container .location-info img{
+  width: 50px;
+}
+.container .location-info h3{
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-left: 20px;
+}
+.container .weather{
+  backdrop-filter: blur(20px);
+  padding: 20px 10px;
+  align-items: start;
+  justify-content: center;
+}
+.container .weather-info{
+  display: flex;
+  backdrop-filter: blur(50px);
+  padding: 20px 10px;
+  align-items: start;
+  justify-content: center;
+}
+.weather-info img{
+  width: 55px;
+}
+.weather-info h3{
+  font-size: 150px;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  text-shadow: 2px 1px 5px black;
+}
+.others{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 30px;
+  border-top: 2px solid var(--primary);
+}
+.humidity img, .wind-speed img{
+  width: 70px;
+}
+.humidity, .wind-speed{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+}
+.humidity h3, .wind-speed h3{
+  font-family: Helvetica, sans-serif;
+  text-shadow: 2px 1px 2px black;
+  color: white;
+  font-weight: bolder;
+  font-size: 26px;
+  letter-spacing: 2px;
+}
